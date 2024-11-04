@@ -95,7 +95,7 @@ const TabSection = () => {
                 </span>
               </button>
               {accStates[activeTab]?.[panelIndex] && (
-                <div className=" text-gray-600 pe-16">{panel.content}</div>
+                <div className=" text-gray-600 md:pe-16">{panel.content}</div>
               )}
             </div>
           ))}
