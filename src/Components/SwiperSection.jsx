@@ -110,13 +110,13 @@ const SwiperSection = () => {
           <div className="flex items-center justify-center gap-5 mt-5 mb-5">
             <div
               ref={prevRef}
-              className="text-3xl !swiper-button-prev !text-black cursor-pointer p-3  rounded-full bg-yellow-300"
+              className="text-xl !swiper-button-prev !text-black cursor-pointer p-3  rounded-full bg-yellow-300"
             >
               <FaArrowLeft />
             </div>
             <div
               ref={nextRef}
-              className="!swiper-button-next text-3xl !text-black cursor-pointer p-3  rounded-full bg-yellow-300"
+              className="!swiper-button-next text-xl !text-black cursor-pointer p-3  rounded-full bg-yellow-300"
             >
               <FaArrowRight />
             </div>

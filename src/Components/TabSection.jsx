@@ -65,24 +65,24 @@ const TabSection = () => {
       <h1 className="py-5 text-center text-3xl md:text-5xl font-bold">
         Our Capabilities
       </h1>
-      <div className="w-full rounded-xl mx-auto my-10 bg-[#FBEEEE]">
+      <div className="w-full rounded-xl mx-auto my-10 ">
         <div className="flex">
           {tabs.map((tab, index) => (
             <span
               key={index}
               onClick={() => handleTabChange(index)}
               className={`px-4 py-2 cursor-pointer text-lg font-medium bg-none ${
-                activeTab === 0 ? "bg-yellow-100" : "text-white-500"
+                activeTab === index ? "bg-yellow-100" : "text-white-500"
               } text-center rounded-t-lg focus:outline-none
               
-              ${activeTab === 1 ? "!bg-[#FBEEEE]" : "text-gray-800"} `}
+              `}
             >
               {tab.label}
             </span>
           ))}
         </div>
 
-        <div className="mt-4">
+        <div className="bg-[#FBEEEE]">
           {tabs[activeTab].panels.map((panel, panelIndex) => (
             <div key={panelIndex} className="mb-4 border-b px-10">
               <button
@@ -99,13 +99,16 @@ const TabSection = () => {
               )}
             </div>
           ))}
+          <a
+            href="#"
+            className="flex items-center text-xl ps-10 py-5 bg-[#FBEEEE]"
+          >
+            Download Placemats
+            <div className="!swiper-button-next text-lg cursor-pointer p-2 ms-3 rounded-full bg-yellow-300">
+              <FaArrowRight />
+            </div>
+          </a>
         </div>
-        <a href="#" className="flex items-center text-xl ps-10 py-5">
-          Download Placemats
-          <div className="!swiper-button-next text-lg cursor-pointer p-2 ms-3 rounded-full bg-yellow-300">
-            <FaArrowRight />
-          </div>
-        </a>
       </div>
     </section>
   );
